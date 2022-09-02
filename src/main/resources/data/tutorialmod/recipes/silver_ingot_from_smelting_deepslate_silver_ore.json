@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "group": "copper_ingot",
+  "ingredient": {
+    "item": "tutorialmod:deepslate_silver_ore"
+  },
+  "result": "tutorialmod:silver_ingot",
+  "experience": 0.7,
+  "cookingtime": 200
+}
