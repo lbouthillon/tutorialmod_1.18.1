@@ -1,4 +1,6 @@
 {
   "item.tutorialmod.raw_silver": "Raw Silver",
-  "item.tutorialmod.silver_ingot": "Silver Ingot"
+  "item.tutorialmod.silver_ingot": "Silver Ingot",
+  "block.tutorialmod.silver_block": "Silver Block",
+  "block.tutorialmod.silver_ore": "Silver Ore"
 }
