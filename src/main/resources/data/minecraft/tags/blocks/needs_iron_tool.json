@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "tutorialmod:silver_block",
+    "tutorialmod:silver_ore",
+    "tutorialmod:deepslate_silver_ore"
+  ]
+}
