@@ -1,6 +1,6 @@
 package net.aboish.mineroleplayingmod.block;
 
-import net.aboish.mineroleplayingmod.TutorialMod;
+import net.aboish.mineroleplayingmod.MineRolePlayingMod;
 import net.aboish.mineroleplayingmod.item.ModCreativeModeTab;
 import net.aboish.mineroleplayingmod.item.ModItems;
 import net.minecraft.world.item.BlockItem;
@@ -18,7 +18,7 @@ import java.util.function.Supplier;
 
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
-            DeferredRegister.create(ForgeRegistries.BLOCKS, TutorialMod.MOD_ID);
+            DeferredRegister.create(ForgeRegistries.BLOCKS, MineRolePlayingMod.MOD_ID);
 
     public static final RegistryObject<Block> SILVER_BLOCK = registerBlock("silver_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL)

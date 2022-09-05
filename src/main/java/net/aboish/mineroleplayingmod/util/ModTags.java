@@ -1,6 +1,6 @@
 package net.aboish.mineroleplayingmod.util;
 
-import net.aboish.mineroleplayingmod.TutorialMod;
+import net.aboish.mineroleplayingmod.MineRolePlayingMod;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
@@ -13,7 +13,7 @@ public class ModTags {
         public static final Tags.IOptionalNamedTag<Block> MACHINES = null;
 
         private static Tags.IOptionalNamedTag<Block> tag(String name) {
-            return BlockTags.createOptional((new ResourceLocation(TutorialMod.MOD_ID, name)));
+            return BlockTags.createOptional((new ResourceLocation(MineRolePlayingMod.MOD_ID, name)));
         }
 
         private static Tags.IOptionalNamedTag<Block> forgeTag(String name) {
@@ -26,7 +26,7 @@ public class ModTags {
         public static Tags.IOptionalNamedTag<Item> RAW_SILVER = forgeTag("raws/silver");
 
         private static Tags.IOptionalNamedTag<Item> tag(String name) {
-            return ItemTags.createOptional((new ResourceLocation(TutorialMod.MOD_ID, name)));
+            return ItemTags.createOptional((new ResourceLocation(MineRolePlayingMod.MOD_ID, name)));
         }
 
         private static Tags.IOptionalNamedTag<Item> forgeTag(String name) {

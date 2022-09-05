@@ -12,8 +12,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(TutorialMod.MOD_ID)
-public class TutorialMod
+@Mod(MineRolePlayingMod.MOD_ID)
+public class MineRolePlayingMod
 {
 
     public static final String MOD_ID = "mineroleplayingmod";
@@ -21,7 +21,7 @@ public class TutorialMod
     private static final Logger LOGGER = LogManager.getLogger();
 
 
-    public TutorialMod() {
+    public MineRolePlayingMod() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
