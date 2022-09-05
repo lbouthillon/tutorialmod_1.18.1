@@ -1,9 +1,9 @@
 {
   "replace": false,
   "values": [
-    "tutorialmod:silver_block",
-    "tutorialmod:raw_silver_block",
-    "tutorialmod:silver_ore",
-    "tutorialmod:deepslate_silver_ore"
+    "mineroleplayingmod:silver_block",
+    "mineroleplayingmod:raw_silver_block",
+    "mineroleplayingmod:silver_ore",
+    "mineroleplayingmod:deepslate_silver_ore"
   ]
 }

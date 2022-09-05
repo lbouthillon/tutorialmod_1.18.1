@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "group": "copper_ingot",
+  "ingredient": {
+    "item": "mineroleplayingmod:raw_silver"
+  },
+  "result": "mineroleplayingmod:silver_ingot",
+  "experience": 0.7,
+  "cookingtime": 200
+}

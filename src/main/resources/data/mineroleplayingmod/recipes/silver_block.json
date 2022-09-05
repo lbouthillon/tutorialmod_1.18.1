@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "forge:ingots/silver"
+    }
+  },
+  "result": {
+    "item": "mineroleplayingmod:silver_block"
+  }
+}

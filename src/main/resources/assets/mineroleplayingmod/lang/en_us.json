@@ -1,0 +1,11 @@
+{
+  "item.mineroleplayingmod.raw_silver": "Raw Silver",
+  "item.mineroleplayingmod.silver_ingot": "Silver Ingot",
+  "block.mineroleplayingmod.silver_block": "Silver Block",
+  "block.mineroleplayingmod.raw_silver_block": "Silver Block",
+  "block.mineroleplayingmod.silver_ore": "Silver Ore",
+  "block.mineroleplayingmod.deepslate_silver_ore": "Deepslate Silver Ore",
+  "item.mineroleplayingmod.onion": "Onion",
+
+  "itemGroup.tutorialtab": "Tutorial Mod"
+}
