@@ -12,13 +12,13 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, MineRolePlayingMod.MOD_ID);
 
     public static final RegistryObject<Item> RAW_SILVER = ITEMS.register("raw_silver",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB)));
 
     public static final RegistryObject<Item> SILVER_INGOT = ITEMS.register("silver_ingot",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB)));
 
     public static final RegistryObject<Item> ONION = ITEMS.register("onion",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB).food(ModFoods.ONION)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB).food(ModFoods.ONION)));
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

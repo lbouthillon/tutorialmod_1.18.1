@@ -22,19 +22,19 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> SILVER_BLOCK = registerBlock("silver_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(9f).requiresCorrectToolForDrops()), ModCreativeModeTab.TUTORIAL_TAB);
+                    .strength(9f).requiresCorrectToolForDrops()), ModCreativeModeTab.MINE_ROLE_PLAYING_TAB);
 
     public static final RegistryObject<Block> RAW_SILVER_BLOCK = registerBlock("raw_silver_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(9f).requiresCorrectToolForDrops()), ModCreativeModeTab.TUTORIAL_TAB);
+                    .strength(9f).requiresCorrectToolForDrops()), ModCreativeModeTab.MINE_ROLE_PLAYING_TAB);
 
     public static final RegistryObject<Block> SILVER_ORE = registerBlock("silver_ore",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(5f).requiresCorrectToolForDrops()), ModCreativeModeTab.TUTORIAL_TAB);
+                    .strength(5f).requiresCorrectToolForDrops()), ModCreativeModeTab.MINE_ROLE_PLAYING_TAB);
 
     public static final RegistryObject<Block> DEEPSLATE_SILVER_ORE = registerBlock("deepslate_silver_ore",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(5f).requiresCorrectToolForDrops()), ModCreativeModeTab.TUTORIAL_TAB);
+                    .strength(5f).requiresCorrectToolForDrops()), ModCreativeModeTab.MINE_ROLE_PLAYING_TAB);
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
