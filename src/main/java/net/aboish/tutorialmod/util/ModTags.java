@@ -23,6 +23,7 @@ public class ModTags {
 
     public static class Items{
         public static Tags.IOptionalNamedTag<Item> SILVER_INGOT = forgeTag("ingots/silver");
+        public static Tags.IOptionalNamedTag<Item> RAW_SILVER = forgeTag("raws/silver");
 
         private static Tags.IOptionalNamedTag<Item> tag(String name) {
             return ItemTags.createOptional((new ResourceLocation(TutorialMod.MOD_ID, name)));
