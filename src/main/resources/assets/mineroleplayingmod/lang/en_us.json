@@ -6,6 +6,13 @@
   "block.mineroleplayingmod.silver_ore": "Silver Ore",
   "block.mineroleplayingmod.deepslate_silver_ore": "Deepslate Silver Ore",
   "item.mineroleplayingmod.onion": "Onion",
+  "block.mineroleplayingmod.lava_block": "Lava Block",
+  "block.mineroleplayingmod.lava_brick": "Lava Brick",
+  "block.mineroleplayingmod.lava_brick_stairs": "Lava Brick Stairs",
+  "block.mineroleplayingmod.lava_brick_slab": "Lava Brick Slab",
+  "block.mineroleplayingmod.lava_brick_fence": "Lava Brick Fence",
+  "block.mineroleplayingmod.lava_brick_fence_gate": "Lava Brick Fence Gate",
+  "block.mineroleplayingmod.lava_brick_wall": "Lava Brick Wall",
 
   "itemGroup.mineroleplayingtab": "Mine Role Playing Mod"
 }

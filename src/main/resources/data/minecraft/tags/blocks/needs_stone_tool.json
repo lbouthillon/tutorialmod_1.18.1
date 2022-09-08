@@ -1,10 +1,6 @@
 {
   "replace": false,
   "values": [
-    "mineroleplayingmod:silver_block",
-    "mineroleplayingmod:raw_silver_block",
-    "mineroleplayingmod:silver_ore",
-    "mineroleplayingmod:deepslate_silver_ore",
     "mineroleplayingmod:lava_block",
     "mineroleplayingmod:lava_brick",
     "mineroleplayingmod:lava_brick_stairs",

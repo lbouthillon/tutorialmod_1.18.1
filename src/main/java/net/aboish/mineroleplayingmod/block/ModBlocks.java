@@ -3,10 +3,11 @@ package net.aboish.mineroleplayingmod.block;
 import net.aboish.mineroleplayingmod.MineRolePlayingMod;
 import net.aboish.mineroleplayingmod.item.ModCreativeModeTab;
 import net.aboish.mineroleplayingmod.item.ModItems;
+import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -22,29 +23,69 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> SILVER_BLOCK = registerBlock("silver_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(9f).requiresCorrectToolForDrops()), ModCreativeModeTab.MINE_ROLE_PLAYING_TAB);
+                    .strength(9f).requiresCorrectToolForDrops()), new Item.Properties().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB));
 
     public static final RegistryObject<Block> RAW_SILVER_BLOCK = registerBlock("raw_silver_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(9f).requiresCorrectToolForDrops()), ModCreativeModeTab.MINE_ROLE_PLAYING_TAB);
+                    .strength(9f).requiresCorrectToolForDrops()), new Item.Properties().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB));
 
     public static final RegistryObject<Block> SILVER_ORE = registerBlock("silver_ore",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(5f).requiresCorrectToolForDrops()), ModCreativeModeTab.MINE_ROLE_PLAYING_TAB);
+                    .strength(5f).requiresCorrectToolForDrops()), new Item.Properties().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB));
 
     public static final RegistryObject<Block> DEEPSLATE_SILVER_ORE = registerBlock("deepslate_silver_ore",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(5f).requiresCorrectToolForDrops()), ModCreativeModeTab.MINE_ROLE_PLAYING_TAB);
+                    .strength(5f).requiresCorrectToolForDrops()), new Item.Properties().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB));
 
-    private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab){
+    public static final RegistryObject<Block> LAVA_BLOCK = registerBlock("lava_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(9f).requiresCorrectToolForDrops()), new Item.Properties().fireResistant().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB));
+
+    public static final RegistryObject<Block> LAVA_BRICK = registerBlock("lava_brick",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(9f).requiresCorrectToolForDrops()),
+            new Item.Properties().fireResistant().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB));
+
+    public static final RegistryObject<Block> LAVA_BRICK_STAIRS = registerBlock("lava_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.LAVA_BRICK.get().defaultBlockState() , BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(9f).requiresCorrectToolForDrops()),
+            new Item.Properties().fireResistant().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB));
+
+    public static final RegistryObject<Block> LAVA_BRICK_SLAB = registerBlock("lava_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(9f).requiresCorrectToolForDrops()),
+            new Item.Properties().fireResistant().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB));
+
+    public static final RegistryObject<Block> LAVA_BRICK_FENCE = registerBlock("lava_brick_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(9f).requiresCorrectToolForDrops()),
+            new Item.Properties().fireResistant().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB));
+
+    public static final RegistryObject<Block> LAVA_BRICK_FENCE_GATE = registerBlock("lava_brick_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(9f).requiresCorrectToolForDrops()),
+            new Item.Properties().fireResistant().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB));
+
+    public static final RegistryObject<Block> LAVA_BRICK_WALL = registerBlock("lava_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(9f).requiresCorrectToolForDrops()),
+            new Item.Properties().fireResistant().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB));
+
+    private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, Item.Properties itemProp){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
-        registerBlockItem(name, toReturn, tab);
+        registerBlockItem(name, toReturn, itemProp);
         return toReturn;
     }
 
+
     private static <T extends Block>RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block,
+                                                                           Item.Properties itemProp){
+        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), itemProp));
+    }
+
+    private static <T extends Block>RegistryObject<Item> registerBlockItemFireResistant(String name, RegistryObject<T> block,
                                                                            CreativeModeTab tab){
-        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
+        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().fireResistant().tab(tab)));
     }
 
     public static void register(IEventBus eventBus) {
