@@ -13,6 +13,11 @@
   "block.mineroleplayingmod.lava_brick_fence": "Lava Brick Fence",
   "block.mineroleplayingmod.lava_brick_fence_gate": "Lava Brick Fence Gate",
   "block.mineroleplayingmod.lava_brick_wall": "Lava Brick Wall",
+  "block.mineroleplayingmod.ebony_log": "Ebony Log",
+  "block.mineroleplayingmod.stripped_ebony_log": "Stripped Ebony Log",
+  "block.mineroleplayingmod.ebony_wood": "Ebony Wood",
+  "block.mineroleplayingmod.stripped_ebony_wood": "Stripped Ebony Wood",
+  "block.mineroleplayingmod.ebony_planks": "Ebony Planks",
 
   "itemGroup.mineroleplayingtab": "Mine Role Playing Mod"
 }

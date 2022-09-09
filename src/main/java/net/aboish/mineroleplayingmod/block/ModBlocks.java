@@ -3,12 +3,17 @@ package net.aboish.mineroleplayingmod.block;
 import net.aboish.mineroleplayingmod.MineRolePlayingMod;
 import net.aboish.mineroleplayingmod.item.ModCreativeModeTab;
 import net.aboish.mineroleplayingmod.item.ModItems;
+import net.aboish.mineroleplayingmod.item.custom.ModFlammableRotatedPillarBlock;
 import net.minecraft.client.renderer.item.ItemProperties;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -23,7 +28,8 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> SILVER_BLOCK = registerBlock("silver_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(9f).requiresCorrectToolForDrops()), new Item.Properties().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB));
+                    .strength(9f).requiresCorrectToolForDrops()),
+            new Item.Properties().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB));
 
     public static final RegistryObject<Block> RAW_SILVER_BLOCK = registerBlock("raw_silver_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
@@ -70,6 +76,40 @@ public class ModBlocks {
             () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(9f).requiresCorrectToolForDrops()),
             new Item.Properties().fireResistant().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB));
+
+    public static final RegistryObject<Block> EBONY_LOG = registerBlock("ebony_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)),
+            new Item.Properties().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB));
+
+    public static final RegistryObject<Block> STRIPPED_EBONY_LOG = registerBlock("stripped_ebony_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)),
+            new Item.Properties().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB));
+
+    public static final RegistryObject<Block> EBONY_WOOD = registerBlock("ebony_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)),
+            new Item.Properties().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB));
+    public static final RegistryObject<Block> STRIPPED_EBONY_WOOD = registerBlock("stripped_ebony_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)),
+            new Item.Properties().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB));
+
+    public static final RegistryObject<Block> EBONY_PLANKS = registerBlock("ebony_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 20;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 5;
+                }
+            }, new Item.Properties().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB));
+
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, Item.Properties itemProp){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

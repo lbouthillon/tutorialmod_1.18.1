@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "mineroleplayingmod:ebony_log",
+    "mineroleplayingmod:ebony_wood",
+    "mineroleplayingmod:stripped_ebony_log",
+    "mineroleplayingmod:stripped_ebony_wood"
+  ]
+}

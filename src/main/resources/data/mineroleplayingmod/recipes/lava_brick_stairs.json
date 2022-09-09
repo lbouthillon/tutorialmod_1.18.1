@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_stairs",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "mineroleplayingmod:lava_brick"
+    }
+  },
+  "result": {
+    "item": "mineroleplayingmod:lava_brick_stairs",
+    "count": 4
+  }
+}
