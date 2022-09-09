@@ -10,10 +10,10 @@
       "item": "minecraft:stick"
     },
     "W": {
-      "item": "mineroleplayingmod:lava_brick"
+      "item": "mineroleplayingmod:ebony_planks"
     }
   },
   "result": {
-    "item": "mineroleplayingmod:lava_brick_fence_gate"
+    "item": "mineroleplayingmod:ebony_fence_gate"
   }
 }

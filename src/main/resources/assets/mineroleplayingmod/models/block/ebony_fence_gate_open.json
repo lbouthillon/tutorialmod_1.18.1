@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/template_fence_gate_open",
   "textures": {
-    "texture": "mineroleplayingmod:blocks/lava_brick"
+    "texture": "mineroleplayingmod:blocks/ebony_planks"
   }
 }

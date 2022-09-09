@@ -7,14 +7,14 @@
   ],
   "key": {
     "W": {
-      "item": "mineroleplayingmod:lava_brick"
+      "item": "mineroleplayingmod:ebony_planks"
     },
     "#": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "mineroleplayingmod:lava_brick_fence",
+    "item": "mineroleplayingmod:ebony_fence",
     "count": 3
   }
 }

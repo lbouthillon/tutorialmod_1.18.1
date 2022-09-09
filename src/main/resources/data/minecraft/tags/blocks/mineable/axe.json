@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "#mineroleplayingmod:ebony_logs"
+    "mineroleplayingmod:ebony_fence",
+    "#mineroleplayingmod:ebony_logs",
+    "mineroleplayingmod:ebony_fence_gate"
   ]
 }

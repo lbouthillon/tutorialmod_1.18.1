@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "mineroleplayingmod:lava_block"
+    }
+  },
+  "result": {
+    "item": "mineroleplayingmod:lava_brick",
+    "count": 4
+  }
+}

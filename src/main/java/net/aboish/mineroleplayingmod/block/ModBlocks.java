@@ -62,15 +62,15 @@ public class ModBlocks {
                     .strength(9f).requiresCorrectToolForDrops()),
             new Item.Properties().fireResistant().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB));
 
-    public static final RegistryObject<Block> LAVA_BRICK_FENCE = registerBlock("lava_brick_fence",
-            () -> new FenceBlock(BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<Block> EBONY_FENCE = registerBlock("ebony_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(9f).requiresCorrectToolForDrops()),
-            new Item.Properties().fireResistant().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB));
+            new Item.Properties().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB));
 
-    public static final RegistryObject<Block> LAVA_BRICK_FENCE_GATE = registerBlock("lava_brick_fence_gate",
-            () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.STONE)
+    public static final RegistryObject<Block> EBONY_FENCE_GATE = registerBlock("ebony_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(9f).requiresCorrectToolForDrops()),
-            new Item.Properties().fireResistant().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB));
+            new Item.Properties().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB));
 
     public static final RegistryObject<Block> LAVA_BRICK_WALL = registerBlock("lava_brick_wall",
             () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE)

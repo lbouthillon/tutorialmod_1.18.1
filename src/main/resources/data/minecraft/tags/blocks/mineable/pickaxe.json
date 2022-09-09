@@ -9,8 +9,7 @@
     "mineroleplayingmod:lava_brick",
     "mineroleplayingmod:lava_brick_stairs",
     "mineroleplayingmod:lava_brick_slab",
-    "mineroleplayingmod:lava_brick_fence",
-    "mineroleplayingmod:lava_brick_wall",
-    "mineroleplayingmod:lava_brick_fence_gate"
+    "mineroleplayingmod:lava_brick_wall"
+
   ]
 }
