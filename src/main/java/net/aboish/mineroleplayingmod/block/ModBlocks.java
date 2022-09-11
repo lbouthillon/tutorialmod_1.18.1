@@ -4,7 +4,6 @@ import net.aboish.mineroleplayingmod.MineRolePlayingMod;
 import net.aboish.mineroleplayingmod.item.ModCreativeModeTab;
 import net.aboish.mineroleplayingmod.item.ModItems;
 import net.aboish.mineroleplayingmod.item.custom.ModFlammableRotatedPillarBlock;
-import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.BlockItem;
@@ -92,6 +91,11 @@ public class ModBlocks {
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)),
             new Item.Properties().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB));
 
+    public static final RegistryObject<Block> EBONY_BUTTON = registerBlock("ebony_button",
+            () -> new WoodButtonBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(1f).noCollission()),
+            new Item.Properties().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB));
+
     public static final RegistryObject<Block> EBONY_PLANKS = registerBlock("ebony_planks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)) {
                 @Override
@@ -109,6 +113,23 @@ public class ModBlocks {
                     return 5;
                 }
             }, new Item.Properties().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB));
+
+
+
+    public static final RegistryObject<Block> EBONY_PRESSURE_PLATE = registerBlock("ebony_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(1f)),
+            new Item.Properties().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB));
+
+    public static final RegistryObject<Block> EBONY_DOOR = registerBlock("ebony_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(1f).noOcclusion()),
+            new Item.Properties().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB));
+
+    public static final RegistryObject<Block> EBONY_TRAPDOOR = registerBlock("ebony_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(1f).noOcclusion()),
+            new Item.Properties().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB));
 
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, Item.Properties itemProp){

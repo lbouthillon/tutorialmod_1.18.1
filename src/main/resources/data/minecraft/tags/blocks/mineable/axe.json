@@ -3,6 +3,10 @@
   "values": [
     "mineroleplayingmod:ebony_fence",
     "#mineroleplayingmod:ebony_logs",
+    "mineroleplayingmod:ebony_button",
+    "mineroleplayingmod:ebony_door",
+    "mineroleplayingmod:ebony_trapdoor",
+    "mineroleplayingmod:ebony_pressure_plate",
     "mineroleplayingmod:ebony_fence_gate"
   ]
 }

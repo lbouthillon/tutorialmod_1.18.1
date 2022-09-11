@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button",
+  "textures": {
+    "texture": "mineroleplayingmod:blocks/ebony_planks"
+  }
+}

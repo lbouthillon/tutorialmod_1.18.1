@@ -18,6 +18,10 @@
   "block.mineroleplayingmod.ebony_wood": "Ebony Wood",
   "block.mineroleplayingmod.stripped_ebony_wood": "Stripped Ebony Wood",
   "block.mineroleplayingmod.ebony_planks": "Ebony Planks",
+  "block.mineroleplayingmod.ebony_button": "Ebony Button",
+  "block.mineroleplayingmod.ebony_pressure_plate": "Ebony Pressure Plate",
+  "block.mineroleplayingmod.ebony_door": "Ebony Door",
+  "block.mineroleplayingmod.ebony_trapdoor": "Ebony Trapdoor",
 
   "itemGroup.mineroleplayingtab": "Mine Role Playing Mod"
 }
