@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "mineroleplayingmod:items/poisoned_netherite_sword"
+  }
+}
