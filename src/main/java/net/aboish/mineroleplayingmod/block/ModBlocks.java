@@ -3,7 +3,7 @@ package net.aboish.mineroleplayingmod.block;
 import net.aboish.mineroleplayingmod.MineRolePlayingMod;
 import net.aboish.mineroleplayingmod.item.ModCreativeModeTab;
 import net.aboish.mineroleplayingmod.item.ModItems;
-import net.aboish.mineroleplayingmod.item.custom.ModFlammableRotatedPillarBlock;
+import net.aboish.mineroleplayingmod.block.custom.ModFlammableRotatedPillarBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.BlockItem;

@@ -1,4 +1,4 @@
-package net.aboish.mineroleplayingmod.item.custom;
+package net.aboish.mineroleplayingmod.block.custom;
 
 
 import net.aboish.mineroleplayingmod.block.ModBlocks;
