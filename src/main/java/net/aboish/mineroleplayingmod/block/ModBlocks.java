@@ -1,6 +1,7 @@
 package net.aboish.mineroleplayingmod.block;
 
 import net.aboish.mineroleplayingmod.MineRolePlayingMod;
+import net.aboish.mineroleplayingmod.block.custom.MagicLanternBlock;
 import net.aboish.mineroleplayingmod.item.ModCreativeModeTab;
 import net.aboish.mineroleplayingmod.item.ModItems;
 import net.aboish.mineroleplayingmod.block.custom.ModFlammableRotatedPillarBlock;
@@ -129,6 +130,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> EBONY_TRAPDOOR = registerBlock("ebony_trapdoor",
             () -> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(1f).noOcclusion()),
+            new Item.Properties().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB));
+
+    public static final RegistryObject<Block> MAGIC_LANTERN = registerBlock("magic_lantern",
+            () -> new MagicLanternBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(1f).noOcclusion().lightLevel(
+                            (state) -> state.getValue(MagicLanternBlock.LIT) ? 15 : 0)),
             new Item.Properties().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB));
 
 

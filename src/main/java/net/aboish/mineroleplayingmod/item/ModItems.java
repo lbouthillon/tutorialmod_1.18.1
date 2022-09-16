@@ -1,7 +1,9 @@
 package net.aboish.mineroleplayingmod.item;
 
 import net.aboish.mineroleplayingmod.MineRolePlayingMod;
+import net.aboish.mineroleplayingmod.item.custom.HolyArmorItem;
 import net.aboish.mineroleplayingmod.item.custom.PoisonedSwordItem;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -64,7 +66,31 @@ public class ModItems {
     public static final RegistryObject<Item> SILVER_HOE = ITEMS.register("silver_hoe",
             () -> new HoeItem(ModTiers.SILVER, 0, 1f,
                     new Item.Properties().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB)));
+
+    public static final RegistryObject<Item> SILVER_HELMET = ITEMS.register("silver_helmet",
+            () -> new ArmorItem(ModArmorMaterials.SILVER, EquipmentSlot.HEAD,
+                    new Item.Properties().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB)));
+
+    public static final RegistryObject<Item> SILVER_CHESTPLATE = ITEMS.register("silver_chestplate",
+            () -> new HolyArmorItem(ModArmorMaterials.SILVER, EquipmentSlot.CHEST,
+                    new Item.Properties().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB)));
+
+    public static final RegistryObject<Item> SILVER_LEGGINGS = ITEMS.register("silver_leggings",
+            () -> new ArmorItem(ModArmorMaterials.SILVER, EquipmentSlot.LEGS,
+                    new Item.Properties().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB)));
+
+    public static final RegistryObject<Item> SILVER_BOOTS = ITEMS.register("silver_boots",
+            () -> new ArmorItem(ModArmorMaterials.SILVER, EquipmentSlot.FEET,
+                    new Item.Properties().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB)));
+
+    public static final RegistryObject<Item> MAGIC_INFUSED_DUST = ITEMS.register("magic_infused_dust",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB)));
+
+    public static final RegistryObject<Item> ELVEN_BOW = ITEMS.register("elven_bow",
+            () -> new BowItem(new Item.Properties().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB).durability(1000)));
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
+
+
 }

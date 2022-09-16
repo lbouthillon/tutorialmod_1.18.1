@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_lantern",
+  "textures": {
+    "lantern": "mineroleplayingmod:blocks/magic_lantern_off"
+  }
+}

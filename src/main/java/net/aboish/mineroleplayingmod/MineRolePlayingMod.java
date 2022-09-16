@@ -2,6 +2,7 @@ package net.aboish.mineroleplayingmod;
 
 import net.aboish.mineroleplayingmod.block.ModBlocks;
 import net.aboish.mineroleplayingmod.item.ModItems;
+import net.aboish.mineroleplayingmod.util.ModItemProperties;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.Blocks;
@@ -38,6 +39,10 @@ public class MineRolePlayingMod
     private void clientSetup(final FMLClientSetupEvent event) {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.EBONY_DOOR.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.EBONY_TRAPDOOR.get(), RenderType.translucent());
+
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.MAGIC_LANTERN.get(), RenderType.cutout());
+
+        ModItemProperties.addCustomItemProperties();
     }
 
     private void setup(final FMLCommonSetupEvent event)
