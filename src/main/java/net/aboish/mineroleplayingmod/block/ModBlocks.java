@@ -2,6 +2,7 @@ package net.aboish.mineroleplayingmod.block;
 
 import net.aboish.mineroleplayingmod.MineRolePlayingMod;
 import net.aboish.mineroleplayingmod.block.custom.MagicLanternBlock;
+import net.aboish.mineroleplayingmod.block.custom.OnionPlantBlock;
 import net.aboish.mineroleplayingmod.item.ModCreativeModeTab;
 import net.aboish.mineroleplayingmod.item.ModItems;
 import net.aboish.mineroleplayingmod.block.custom.ModFlammableRotatedPillarBlock;
@@ -138,13 +139,18 @@ public class ModBlocks {
                             (state) -> state.getValue(MagicLanternBlock.LIT) ? 15 : 0)),
             new Item.Properties().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB));
 
+    public static final RegistryObject<Block> ONION_PLANT = registerBlockWithoutBlockItem("onion_plant",
+            () -> new OnionPlantBlock(BlockBehaviour.Properties.of(Material.PLANT).noOcclusion()));
+
+    private static <T extends Block>RegistryObject<T> registerBlockWithoutBlockItem(String name, Supplier<T> block){
+        return BLOCKS.register(name, block);
+    }
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, Item.Properties itemProp){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, itemProp);
         return toReturn;
     }
-
 
     private static <T extends Block>RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block,
                                                                            Item.Properties itemProp){

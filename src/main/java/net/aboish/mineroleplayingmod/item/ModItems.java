@@ -1,11 +1,13 @@
 package net.aboish.mineroleplayingmod.item;
 
 import net.aboish.mineroleplayingmod.MineRolePlayingMod;
+import net.aboish.mineroleplayingmod.block.ModBlocks;
 import net.aboish.mineroleplayingmod.item.custom.HolyArmorItem;
 import net.aboish.mineroleplayingmod.item.custom.PoisonedSwordItem;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -88,6 +90,10 @@ public class ModItems {
 
     public static final RegistryObject<Item> ELVEN_BOW = ITEMS.register("elven_bow",
             () -> new BowItem(new Item.Properties().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB).durability(1000)));
+
+    public static final RegistryObject<Item> ONION_SEEDS = ITEMS.register("onion_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.ONION_PLANT.get(),
+                    new Item.Properties().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB)));
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

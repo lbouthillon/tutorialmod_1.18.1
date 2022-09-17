@@ -1,0 +1,6 @@
+{
+    "parent": "mineroleplayingmod:item/elven_bow",
+    "textures": {
+        "layer0": "mineroleplayingmod:items/elven_bow_pulling_2"
+    }
+}

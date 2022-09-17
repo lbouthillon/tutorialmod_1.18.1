@@ -19,6 +19,7 @@
   "item.mineroleplayingmod.silver_boots": "Silver Boots",
   "item.mineroleplayingmod.magic_infused_dust": "Magic Infused Dust",
   "item.mineroleplayingmod.elven_bow": "Elven Bow",
+  "item.mineroleplayingmod.onion_seeds": "Onion Seeds",
 
 
   "block.mineroleplayingmod.silver_block": "Silver Block",
@@ -42,6 +43,7 @@
   "block.mineroleplayingmod.ebony_door": "Ebony Door",
   "block.mineroleplayingmod.ebony_trapdoor": "Ebony Trapdoor",
   "block.mineroleplayingmod.magic_lantern": "Magic Lantern",
+  "block.mineroleplayingmod.onion_plant": "Onion Plant",
 
   "itemGroup.mineroleplayingtab": "Mine Role Playing Mod"
 }
