@@ -6,6 +6,7 @@ import net.aboish.mineroleplayingmod.block.custom.OnionPlantBlock;
 import net.aboish.mineroleplayingmod.item.ModCreativeModeTab;
 import net.aboish.mineroleplayingmod.item.ModItems;
 import net.aboish.mineroleplayingmod.block.custom.ModFlammableRotatedPillarBlock;
+import net.aboish.mineroleplayingmod.world.feature.tree.EbonyTreeGrower;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.BlockItem;
@@ -115,6 +116,28 @@ public class ModBlocks {
                     return 5;
                 }
             }, new Item.Properties().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB));
+
+    public static final RegistryObject<Block> EBONY_LEAVES = registerBlock("ebony_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 60;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 30;
+                }
+            }, new Item.Properties().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB));
+
+    public static final RegistryObject<Block> EBONY_SAPLING = registerBlock("ebony_sapling",
+            () -> new SaplingBlock(new EbonyTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)),
+            new Item.Properties().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB));
 
 
 

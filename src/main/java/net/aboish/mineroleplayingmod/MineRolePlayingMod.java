@@ -43,6 +43,9 @@ public class MineRolePlayingMod
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.MAGIC_LANTERN.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.ONION_PLANT.get(), RenderType.cutout());
 
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.EBONY_LEAVES.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.EBONY_SAPLING.get(), RenderType.cutout());
+
         ModItemProperties.addCustomItemProperties();
     }
 

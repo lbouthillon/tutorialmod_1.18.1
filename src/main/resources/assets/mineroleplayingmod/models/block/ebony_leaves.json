@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "mineroleplayingmod:blocks/ebony_leaves"
+  }
+}
