@@ -47,5 +47,11 @@
   "block.mineroleplayingmod.ebony_leaves": "Ebony Leaves",
   "block.mineroleplayingmod.ebony_sapling": "Ebony Sapling",
 
+  "effect.mineroleplayingmod.bleeding": "Bleeding",
+  "item.minecraft.potion.effect.bleeding_potion": "Bleeding Potion",
+  "item.minecraft.splash_potion.effect.bleeding_potion": "Splash Potion of Bleeding",
+  "item.minecraft.lingering_potion.effect.bleeding_potion": "Lingering Potion of Bleeding",
+  "death.attack.bleeding": "You have lost too much blood",
+
   "itemGroup.mineroleplayingtab": "Mine Role Playing Mod"
 }

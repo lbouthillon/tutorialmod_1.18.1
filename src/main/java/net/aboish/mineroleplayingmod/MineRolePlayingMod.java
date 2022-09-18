@@ -1,12 +1,17 @@
 package net.aboish.mineroleplayingmod;
 
 import net.aboish.mineroleplayingmod.block.ModBlocks;
+import net.aboish.mineroleplayingmod.effect.ModEffects;
 import net.aboish.mineroleplayingmod.item.ModItems;
+import net.aboish.mineroleplayingmod.potion.ModPotions;
+import net.aboish.mineroleplayingmod.util.BetterBrewingRecipe;
 import net.aboish.mineroleplayingmod.util.ModItemProperties;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -29,6 +34,8 @@ public class MineRolePlayingMod
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
+        ModEffects.register(eventBus);
+        ModPotions.register(eventBus);
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
 
@@ -52,7 +59,8 @@ public class MineRolePlayingMod
     private void setup(final FMLCommonSetupEvent event)
     {
         // some preinit code
-        LOGGER.info("HELLO FROM PREINIT");
-        LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
+        event.enqueueWork(() -> {
+            BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD, ModItems.ONION.get(), ModPotions.BLEEDING_POTION.get()));
+        });
     }
 }
