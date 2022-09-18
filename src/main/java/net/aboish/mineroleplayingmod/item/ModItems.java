@@ -91,6 +91,9 @@ public class ModItems {
     public static final RegistryObject<Item> ELVEN_BOW = ITEMS.register("elven_bow",
             () -> new BowItem(new Item.Properties().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB).durability(1000)));
 
+    public static final RegistryObject<Item> LANTERN_ON_A_STICK = ITEMS.register("lantern_on_a_stick",
+            () -> new Item(new Item.Properties().stacksTo(1).tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB)));
+
     public static final RegistryObject<Item> ONION_SEEDS = ITEMS.register("onion_seeds",
             () -> new ItemNameBlockItem(ModBlocks.ONION_PLANT.get(),
                     new Item.Properties().tab(ModCreativeModeTab.MINE_ROLE_PLAYING_TAB)));

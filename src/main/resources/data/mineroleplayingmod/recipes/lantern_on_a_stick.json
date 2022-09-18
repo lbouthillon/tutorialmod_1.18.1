@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "/  ",
+    "C/ ",
+    "L /"
+  ],
+  "key": {
+    "/": {
+      "item": "minecraft:stick"
+    },
+    "C": {
+      "item": "minecraft:chain"
+    },
+    "L": {
+      "item": "minecraft:lantern"
+    }
+  },
+  "result": {
+    "item": "mineroleplayingmod:lantern_on_a_stick",
+    "count": 1
+  }
+}
